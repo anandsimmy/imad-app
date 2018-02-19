@@ -6,58 +6,58 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
- 'article-one': {
-    title: 'Article One | Anand Simmy',
-    heading:"Article One",
-    date: "Feb 10, 2018",
-    content: ` <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>` 
-    
-},
- 'article-two': {
-    title: 'Article Two | Anand Simmy',
-    heading: 'Article Two',
-    date: 'Feb 15, 2018 ',
-    content: ` <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>` 
-},
- 'article-three':{
-    title: 'Article Three | Anand Simmy',
-    heading: 'Article Three',
-    date: 'Feb 20, 2018 ',
-    content: ` <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>
-                  <p>
-                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
-                  </p>` 
-}
+     'article-one': {
+        title: 'Article One | Anand Simmy',
+        heading:"Article One",
+        date: "Feb 10, 2018",
+        content: ` <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>` 
+        
+    },
+     'article-two': {
+        title: 'Article Two | Anand Simmy',
+        heading: 'Article Two',
+        date: 'Feb 15, 2018 ',
+        content: ` <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>` 
+    },
+     'article-three':{
+        title: 'Article Three | Anand Simmy',
+        heading: 'Article Three',
+        date: 'Feb 20, 2018 ',
+        content: ` <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>
+                      <p>
+                          This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                      </p>` 
+    }
 };
 
 function createTemplate(data) { 
