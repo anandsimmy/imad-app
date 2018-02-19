@@ -11,11 +11,11 @@ img.onclick = function() {
 };
 
 var counter=0;
-var button = getElementById('counter');
+var button = document.getElementById('counter');
 button.onclick = function(){
     
     
-var span = getElementById('count');
+var span = document.getElementById('count');
 counter=counter+1;
 span.innerHTML= counter.toString();
     
