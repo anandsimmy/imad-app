@@ -5,5 +5,5 @@ element.innerHTML="Anand Simmy";
 
 var img= document.getElementById('img');
 img.onclick = function() {
-    img.style.marginLeft= '100px'
+    img.style.marginLeft= '300px'
 };
