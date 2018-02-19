@@ -1,7 +1,4 @@
-console.log('Loaded!');
 
-var element= document.getElementById('main-text');
-element.innerHTML="Anand Simmy";
 
 var img= document.getElementById('img');
 var marginLeft=0;
@@ -12,3 +9,17 @@ function moveLeft() {
 img.onclick = function() {
     var interval= setInterval(moveLeft,50);
 };
+
+var counter=0;
+var button = getElementById('counter');
+button.onclick = function(){
+    
+    
+var span = getElementById('count');
+counter=counter+1;
+span.innerHTML= counter.toString();
+    
+};
+
+
+
