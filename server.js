@@ -5,10 +5,10 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne={
+var articles = {
+var 'article-one': {
     title: 'Article One | Anand Simmy',
-    heading: 'Article One',
+    heading:'Article One',
     date: 'Feb 10, 2018 ',
     content: ` <p>
                       This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
@@ -23,6 +23,41 @@ var articleOne={
                       This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
                   </p>` 
     
+},
+var 'article-two': {
+    title: 'Article Two | Anand Simmy',
+    heading: 'Article Two',
+    date: 'Feb 15, 2018 ',
+    content: ` <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>` 
+},
+var 'article-three':{
+    title: 'Article Three | Anand Simmy',
+    heading: 'Article Three',
+    date: 'Feb 20, 2018 ',
+    content: ` <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>
+                  <p>
+                      This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.This is content for my first article.
+                  </p>` 
+}
 };
 
 function createTemplate(data) { 
@@ -61,11 +96,13 @@ function createTemplate(data) {
         `;
         return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-    res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 app.get('/article-two',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
@@ -89,3 +126,4 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
