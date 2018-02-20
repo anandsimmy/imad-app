@@ -25,7 +25,7 @@ button.onclick = function () {
     
         }
     }
-  request.open('GET','http://http://anandsimmy7.imad.hasura-app.io/', true);
+  request.open('GET','http://anandsimmy7.imad.hasura-app.io/', true);
   request.send(null);
    
 };
