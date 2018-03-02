@@ -143,13 +143,13 @@ app.get('/articles/:articleName',function(req,res){
     pool.query("SELECT * from article where title = ' " + req.params.articleName + "'", function(err, result){ 
        if(err){
           res.status(500).send(err.toString());
-      }else{/*
+      }else{
           if(result.rows.length === 0){
               res.status(404).send('Article not found');
-      }else{*/
+      }else{
           var articleData=result.rows[0];
           res.send(createTemplate(articleData));
-      //}
+      }
           
           
       }
