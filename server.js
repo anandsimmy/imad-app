@@ -125,10 +125,14 @@ app.get('/check-login', function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
         res.send('You are logged in:' + req.session.auth.userId.toString());
     }else{
-        res.semd('Your are not logged in');
+        res.send('Your are not logged in');
     }
     
-});          
+});  
+ app.get('/logout', function(req,res){
+    delete req.session.auth; 
+    res.send('Logged out'); 
+ });
 
 var pool=new Pool(config); 
 app.get('/test-db', function (req, res) {
