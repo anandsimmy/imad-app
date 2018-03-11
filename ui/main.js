@@ -8,7 +8,7 @@ submit.onclick=function(){
     request.onreadystatechange= function(){
         if (request.readyState===XMLHttpRequest.DONE)
         if (request.status===200){
-            consle.log('User logged in');   
+            console.log('User logged in');   
             alert('Logged in successfully');
         }else if(request.status===403){
             alert('Username/password invalid');
